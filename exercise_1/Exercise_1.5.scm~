@@ -7,7 +7,16 @@ x and y as 0
 	0 
 	y))
 
-after evaluating the expression he will get 0
+after evaluating the expression he will get,
+(if #t 0 (p)) 
+(test 0 (p))
 
 
+(test 0 (p)) 
+  
+ (if (= 0 0) 0 (p)) 
+  
+
+  
+ 0 
 
