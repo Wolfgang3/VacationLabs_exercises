@@ -1,5 +1,5 @@
 // test on given carmichael numbers
-=> 
+=> (incomplete)
 // modification was done in fermat-test procedure
 (define (square x) (* x x)) 
   
@@ -18,14 +18,5 @@
         (if (= (expmod a n n) a) (iterate (+ a 1) n) false))) 
   (iterate 1 n)) 
 
-(define (test_number n expected) 
-  (define (report-result n result expected) 
-    (newline) 
-    (display n) 
-    (display result) 
-    (display ": ") 
-    (display (if (eq? result expected) "correct" "Carmichael number"))) 
-  (report-result n (fermat-test_iter? n) expected)
-) 
 
 
