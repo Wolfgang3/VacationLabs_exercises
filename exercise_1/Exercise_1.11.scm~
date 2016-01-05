@@ -1,12 +1,12 @@
-
-(define (iter-f n)
-  (define (iter f1 f2 f3 counter)
-    (if (> counter n)
-        f1
-        (iter (fn f1 f2 f3) f1 f2 (+ counter 1))))
-  (define (fn f1 f2 f3)
-    (+ f1 (* 2 f2) (* 3 f3)))
-  (if (< n 3)
-      n
-      (iter 2 1 0 3)))
+condition: f(n) = n if n<3 and f(n) = f(n - 1) + 2f(n - 2) + 3f(n -3) if n> 3
+=>
+// first i define a function funct
+(define (funct n) 
+   (if (< n 3) 
+	n 
+        (+ (funct (- n 1)) 
+                  (* 2 (funct (- n 2))) 
+                  (* 3 (funct (- n 3))))
+    )
+) 
 

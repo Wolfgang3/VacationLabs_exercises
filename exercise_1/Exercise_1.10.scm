@@ -50,3 +50,5 @@ consider the procedure for (A 3 3):
 (A 1 (A 0 (A 0 4)))
 (A 1 (A 0 8))
 (A 1 16)
+
+yet to complete

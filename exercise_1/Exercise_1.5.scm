@@ -7,7 +7,7 @@ x and y as 0
 	0 
 	y))
 
-after evaluating the expression he will get 0
+after evaluating the expression he will get 0, cuz normal order will replace the value in the procedure 
 
 
 

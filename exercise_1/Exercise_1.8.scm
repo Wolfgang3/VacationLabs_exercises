@@ -1,4 +1,5 @@
-from the reference from the above procedure given for square root:(not sure)
+from the reference from the above procedure given for square root:(not sure, check again)
+=>
 (define (cube_root x) 
    (* x x x))
 
