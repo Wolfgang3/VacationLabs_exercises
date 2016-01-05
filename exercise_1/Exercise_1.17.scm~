@@ -1,6 +1,6 @@
 //multiplication procedure
 =>
-according to the prob new procedures hav to be created like double and half
+according to the prob new procedures hav to be created procedures like double and half
 (define (double num) (+ num num)) 
 (define (halve num) (/ num 2)) 
   
