@@ -17,14 +17,6 @@ conside the traingle as with 5 rows
 4  1331
 5  14641
 
-(define (pascal_tri row col) 
-   (cond ((> col row) 0) 
-         ((< col 0) 0) 
-         ((= col 1) 1) 
-         (else(+ (pascal-triangle (- row 1) (- col 1)) 
-             (pascal-triangle (- row 1) col))))
-) 
-
 
 
 
