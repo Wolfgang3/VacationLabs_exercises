@@ -21,7 +21,7 @@ conside the traingle as with 5 rows
   (cond ((= col 0) 1)
      	((= col row) 1)
         ((> col row) 0)
-        ((< col row) (+ (pass (- row 1) (- col 1)) (pass (- row 1) col)))
+        ((< col row) (+ (pascal_tri (- row 1) (- col 1)) (pascal_tri (- row 1) col)))
   )
 )
 
