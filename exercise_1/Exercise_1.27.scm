@@ -1,5 +1,5 @@
 // test on given carmichael numbers
-=> (incomplete)
+=> (incomplete )
 // modification was done in fermat-test procedure
 (define (square x) (* x x)) 
   
