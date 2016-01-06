@@ -6,24 +6,31 @@
 
 (define (cube x) (* x x x))
 
-(define (simpsons_rule f a b n)
+(define (incr x)(+ x 1) )
 
-  (define h(/ (- b a) n))
-
-  (define (addh x)
-    (+ x (/ (- b a) n))
-   )
-
-  (define (first_term c)
-    (if (remainder (/ (- c a) h)
-      2
-  (* (/ (/ (- b a) n) 3)               
-     (sum first_term a addh b)
+(define (sum term a next b n)
+  (if(> a n)
+   0
+   (+ (term a) 
+   (sum term (next a) next b n))
   )
 )
 
+(define (simpsons_rule f a b n k) 	
+	
+(define h (/ (- b a) n))
+	
+(define (yk k) (f (+ a (* k h))))
+  
+(define (coeff k)
+    (* (cond ((or (= k 0) (= k n)) 1)
+       ((even? k) 2)
+       (else 4))
+       (yk k))) 
+  (* (/ h 3) (sum coeff 0 incr k n))
+)
 
-ex: (simpsons_rule cube 0 1 100)
+ex: (simpsons_rule cube 0 1 100 0)
 
 
 
