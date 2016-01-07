@@ -7,7 +7,6 @@
 	(/ n (+ d (cont-frac n d (- k 1)))))
 )
  
-ex: (cont-frac (lambda (i) 1.0) (lambda (i) 1.0) k)
 
 ; iterative process for part b 
 (define (cont-frac n d k)
@@ -18,4 +17,5 @@ ex: (cont-frac (lambda (i) 1.0) (lambda (i) 1.0) k)
   (iter 1 0)
 )
 
+ex: (cont-frac (lambda (i) 1.0) (lambda (i) 1.0) 10)
 
