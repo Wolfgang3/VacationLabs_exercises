@@ -2,9 +2,10 @@
 =>
 ; for the part a) i solved using recursive process
 (define (cont-frac n d k)
-	(if (= k 0)
-		(/ n d)
-	(/ n (+ d (cont-frac n d (- k 1)))))
+  (if 
+    (= k 1)
+    (/ (n k) (d k))
+    (/ (n k) (+ (d k) (cont-frac n d (- k 1)))))
 )
  
 
@@ -17,5 +18,5 @@
   (iter 1 0)
 )
 
-ex: (cont-frac (lambda (i) 1.0) (lambda (i) 1.0) 10)
+ex: (cont-frac-iter (lambda (i) 1.0) (lambda (i) 1.0) 10)
 
