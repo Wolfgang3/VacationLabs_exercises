@@ -15,8 +15,7 @@
 
 (define (cont-frac n d count)
   (define (iter count result)
-    (if 
-      (= count 0)
+    (if (= count 0)
       result
       (iter (- count 1) (/ (n count) (+ result (d count))))))
   (iter count 0.0)
