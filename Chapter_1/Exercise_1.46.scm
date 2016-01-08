@@ -1,21 +1,26 @@
 // iterative-improve of sqrt in session 1.1.7
 => 
 ; with reference from earlier sessions sqrt and fixed-point
-(define tolerance 0.000001)
-
 (define (iterative-improve good-enough? improve)
   (lambda (guess)
     (if (good-enough? guess)
 	guess
-	(improve guess)))
+	(improve guess))
+  )
 )
 
-(define (good-enough? v1 v2) 
-   (< (/ (abs (- v1 v2)) v2)  tolerance)
+(define tolerance 0.00001)
+
+(define (good-enough? guess x) 
+   (< (/ (abs (- square guess)) x)  tolerance)
 ) 
 
-;sqrt with iterative-improve
+;sqrt with iterative-improve by refering to sqrt procedure on pg 75
 (define (sqrt x) 
+   ((iterative-improve   
+     (lambda (y) 
+       (/ (+ (/ x y) y) 2)) 
+     close-enough?) 1.0)
 )
 
 ;fixed-point with iterative-improve
