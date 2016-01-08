@@ -1,5 +1,6 @@
 // iterative-improve of sqrt in session 1.1.7
 => 
+; with reference from earlier sessions sqrt and fixed-point
 (define tolerance 0.000001)
 
 (define (iterative-improve good-enough? improve)
@@ -15,7 +16,6 @@
 
 ;sqrt with iterative-improve
 (define (sqrt x) 
-
 )
 
 ;fixed-point with iterative-improve
