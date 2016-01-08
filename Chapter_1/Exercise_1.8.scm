@@ -13,6 +13,9 @@ from the reference from the above procedure given for square root:(not sure, che
    (if (good-enough? guess x) 
        guess 
       (cube-root-iter (improve guess x) 
-                       x))) 
+                       x))
+)
+ 
 (define (cube-root x) 
-   (cube-root-iter 1.0 x)) 
+   (cube-root-iter 1.0 x)
+) 
