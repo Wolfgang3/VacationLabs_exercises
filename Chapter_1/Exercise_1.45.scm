@@ -1,4 +1,4 @@
-// fix square root by naively fixed-point by average damping
+// fix square root by naively finding a fixed-point by average damping
 => 
 ;with reference to fixed point in section 1.3.3 and refering to previous exercises and for average-damp on pg 72,fast-expt from pg 45
 
