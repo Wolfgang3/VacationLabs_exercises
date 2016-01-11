@@ -5,12 +5,12 @@
 
 ;for lower-bound 
 (define (lower-bound n)
-
+  (car n)
 )
 
 ;for upper-bound
 (define (upper-bound n)
-
+  (cdr n)
 )
 
 ; for addition
@@ -20,6 +20,6 @@
 )
 
 ; run
-((make-interval 1 10) (cons a b) )
+
 
 
