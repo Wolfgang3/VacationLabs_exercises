@@ -44,7 +44,18 @@
   )
 )
 
+;d) dont know
 
+;run (mobile consists of branch)
+(define branch1 (make-branch 5 10))
+(define branch2 (make-branch 50 30))
+
+(define mobile_one (make-mobile branch1 branch2))
+
+(total-weight mobile_one)
+;value= 40
+
+(balanced mobile_one)
 
 
 
