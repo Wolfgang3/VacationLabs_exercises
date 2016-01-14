@@ -27,15 +27,22 @@
         (enumerate-interval 1 n))
 )
 
+(define (unique-triples2 number)
+  (if (< number 3)
+    ()
+    (append (unique-triples2 (- number 1))
+      (map (lambda (x) (append x (list number)))
+        (unique-pairs (- number 1))
+      )
+    )
+  )
+)
+
 ;referring to procedure on pg. 123
 (define (unique-triples number)
   (if (< number 3)
-      ()
-      (append (unique-triples (- number 1))
-         (map (lambda (x) (append x (list number)))
-              (unique-pairs (- number 1))
-         )
-      )
+      (display "number less then 3")
+      (unique-triples2 number)
   )
 )
 
@@ -43,5 +50,6 @@
 (unique-triples 5)
 ;value= ((2 1 3) (2 1 4) (3 1 4) (3 2 4) (2 1 5) (3 1 5) (3 2 5) (4 1 5) (4 2 5) (4 3 5))
 
-
+(unique-triples 2)
+;value= number less then 3
 
