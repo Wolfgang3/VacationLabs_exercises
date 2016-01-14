@@ -1,0 +1,3 @@
+// eight queen problem
+=> 
+
