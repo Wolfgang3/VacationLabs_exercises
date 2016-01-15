@@ -45,8 +45,6 @@
 (define (=number? exp num)
   (and (number? exp) (= exp num)))
 
-;;;;;
-;;;
 (define (base exp)
   (car exp))
 
@@ -84,6 +82,7 @@
 (deriv '(x + (3 * (x + (y + 2)))) 'x)
 ;value= ??
 
-;;;;;;;;;;;;;;;;;;;;
+;=================================;
+;part b) with reduced no. of parentheses
 
 
