@@ -1,6 +1,8 @@
 // defining equal procedure
 => 
 ;first we see if both the list are pair
+;eq? is used to check if both values are equal
+
 (define (equal? l1 l2)
   (cond ( (and (pair? l1) (pair? l2)) 
           (and (equal? (car l1) (car l2))
