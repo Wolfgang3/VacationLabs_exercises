@@ -81,4 +81,13 @@
 )
 
 ;run 
+(deriv '(* x y (+ x 3)) 'x)
+;value= (+ (* x y) (* y (+ x 3)))
+
+(deriv '(+ x 3) 'x)
+;Value= 1
+
+(deriv '(* x y) 'x)
+;Value= y
+
 
