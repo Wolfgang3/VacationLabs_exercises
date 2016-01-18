@@ -63,3 +63,5 @@
 
 
 ;part a) ;both procedures give the same result for all the 3 trees i.e. (1 3 5 7 9 11)
+
+;part b) ;they will hav same order of growth because they use a balance tree
