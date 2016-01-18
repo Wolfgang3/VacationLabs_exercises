@@ -38,3 +38,9 @@
 (define set (list 1 2 3 4))
 (adjoint-set 5 set)
 ;value= (1 2 3 4 5)
+
+;supose if we run 
+(define set (list 1 3 2 4))
+(element-of-set? 2 s)
+;value= #f  (but 2 is present in the list)
+;this is because its not in ascending order
