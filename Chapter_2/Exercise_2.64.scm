@@ -42,3 +42,5 @@
 ; 'non-left-elts' will save all the list in the left tree except the 1st element
 ; 'right-size' will save the right side of the tree
 ; 'this-entry' will save the 1st entry of the non-left-eltss 
+
+;part b) order of growth will be (log n)
