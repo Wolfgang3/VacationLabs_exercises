@@ -47,23 +47,6 @@
   )
 )
 
-(define (decode bits tree)
-  (define (decode-1 bits current-branch)
-    (if (null? bits)
-      '()
-      (let ((next-branch
-             (choose-branch (car bits) current-branch)))
-        (if (leaf? next-branch)
-            (cons (symbol-leaf next-branch)
-                  (decode-1 (cdr bits) tree))
-            (decode-1 (cdr bits) next-branch)
-            )
-      )
-    )
-  )
-  (decode-1 bits tree)
-)
-
 (define (choose-branch bit branch)
   (cond ((= bit 0) (left-branch branch))
         ((= bit 1) (right-branch branch))
@@ -112,15 +95,44 @@
   )
 )
 
+(define (element-of-set? x set)
+  (cond ((null? set) false)
+        ((= x (car set)) true)
+        ((< x (car set)) false)
+        (else (element-of-set? x (cdr set)) )
+  )
+)
+
+;decode procedure
+(define (decode bits tree)
+  (define (decode-1 bits current-branch)
+    (if (null? bits)
+      '()
+      (let ((next-branch
+             (choose-branch (car bits) current-branch)))
+        (if (leaf? next-branch)
+            (cons (symbol-leaf next-branch)
+                  (decode-1 (cdr bits) tree))
+            (decode-1 (cdr bits) next-branch)
+            )
+      )
+    )
+  )
+  (decode-1 bits tree)
+)
+
 ;encode-symbol procedure 
 (define (encode-symbol symb tree)
   (cond ((element-of-set? symb (symbols (left-branch tree)))
           )
+
         (else (error "symbol not in the tree"))
   )
 )
 
 ;run 
 (define sample-message '(0 1 1 0 0 1 0 1 0 1 1 1 0))
-
 (decode sample-message sample-tree)
+;value= (a d a b b c a)
+;now the encoding procedure
+(encode '(a d a b b c a) sample-tree)
