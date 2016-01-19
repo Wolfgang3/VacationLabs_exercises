@@ -112,3 +112,4 @@
 ; run
 (define sample-message '(0 1 1 0 0 1 0 1 0 1 1 1 0))
 (decode sample-message sample-tree)
+;value= (a d a b b c a)
