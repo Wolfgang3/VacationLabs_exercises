@@ -1,4 +1,4 @@
-// 
+// data-directed procedure
 =>
 (define (deriv exp var)
   (cond ((number? exp) 0)
@@ -73,4 +73,6 @@
   )
 )
 
+;part c): cant understand
 
+;part d): it will give the same result only the indices will be interchange(reverse order)
