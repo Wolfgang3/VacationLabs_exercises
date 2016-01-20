@@ -132,7 +132,7 @@
         )
         ((element-of-set? symb (symbols (right-branch s_tree)))
          (if (leaf? (right-branch s_tree))
-             '(1) ; for the right node
+            '(1) ; for the right node
             (cons 1  (encode-symbol symb (right-branch s_tree))) ;else add 1 if it still on the right 
           )
         )
@@ -153,4 +153,4 @@
 (encode sample-symbols sample-tree)
 ;value= (0 1 1 0 0 1 0 1 0 1 1 1 0)
 (encode '(x y z) sample-tree)
-;;symbol not in the tree
+;symbol not in the tree
