@@ -1,4 +1,4 @@
-// genetic equality predicate equ? procedure
+// generic equality predicate equ? procedure
 =>
 ;for ordinary numbers
 (define (ordinary_equ? n1 n2)
