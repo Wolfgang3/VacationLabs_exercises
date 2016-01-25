@@ -16,8 +16,20 @@
                              L2)
             ))
           ;<form complet result>
-          ;(adjoin-term (make-term))
+          (cons (adjoin-term (make-term new-o new-c) (car rest-of-result))
+                (cdr rest-of-result))
         )))
     )
+  )
+)
+
+;for div-poly procedure 
+(define (div-poly poly1 poly2)
+  (if (same-variable? (variable poly1) (variable poly2))
+      (make-poly (variable poly1)
+        (div-terms (term-list poly1)
+                 (term-list poly2))
+      )
+    (error "variables are different")
   )
 )
