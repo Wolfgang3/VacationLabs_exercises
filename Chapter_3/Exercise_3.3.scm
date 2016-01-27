@@ -24,11 +24,10 @@
   )
 dispatch)
 
-
 ;run
 (define acc (make-account 100 'aa))
 
-((acc 'ab 'withdraw) 40)
+((acc 'aa 'withdraw) 40)
 ;Value: 60
 ((acc 'bb 'deposit) 50)
 ;incorrect password
