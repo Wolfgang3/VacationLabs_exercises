@@ -1,4 +1,4 @@
-//
+// reduce-terms for polynomial
 =>
 
 ;part b)
@@ -18,7 +18,7 @@
   )
 )
 
-(define (reduce-terms)
+(define (reduce-terms n d)
 )
 
 
