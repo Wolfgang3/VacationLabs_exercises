@@ -1,5 +1,6 @@
 // alternate syntax for make-withdraw procedure
 =>
+
 ;using let
 ; (let ((<var> <exp>)) <body>)
 (define (make-withdraw initial-amount)
