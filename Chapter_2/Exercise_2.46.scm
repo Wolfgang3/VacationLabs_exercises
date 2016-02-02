@@ -23,7 +23,7 @@
   (make-vect (* x (xcor-vect vect))
              (* x (ycor-vect vect)))) 
 
-;run
+;run 
 (define v1 (make-vect 1 2))
 (define v2 (make-vect 3 4))
 v1
@@ -36,9 +36,3 @@ v2
 ; '(-2 . -2)
 (scale-vect 2 v1)
 ; '(2 . 4)
-  
-
-
-  
-
-
