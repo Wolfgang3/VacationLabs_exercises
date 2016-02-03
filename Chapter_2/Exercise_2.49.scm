@@ -6,9 +6,9 @@
 ;a) to draw the outline of a frame
 ;define points
 (define p1 (make-vect 0 0))
-(define p2 (make-vect 0 4))
-(define p3 (make-vect 4 0))
-(define p4 (make-vect 4 4))
+(define p2 (make-vect 0 1))
+(define p3 (make-vect 1 0))
+(define p4 (make-vect 1 1))
 (define frame (list (make-segment p1 p3)
 		    (make-segment p3 p4)
 		    (make-segment p4 p2)
@@ -22,15 +22,15 @@
 ;b) to draw the X
 ;define the points
 (define q1 (make-vect 0 0))
-(define q2 (make-vect 0 4))
-(define q3 (make-vect 4 0))
-(define q4 (make-vect 4 4))
+(define q2 (make-vect 0 1))
+(define q3 (make-vect 1 0))
+(define q4 (make-vect 1 1))
 (define x (list (make-segment q1 q4)
 		(make-segment q2 q3)))
 ;run
 (define xmark (segments->painter x))
 (paint xmark)
-;
+;x was drawn
 
 ;c) to draw a diamond shape
 ;define the points
