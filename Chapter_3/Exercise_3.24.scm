@@ -1,12 +1,19 @@
 ;; 
 ;=>
+;with refrence to acc proc on pg no. 268
 (define (make-table same-key?)
   (let ((local-table (list '*table*)))
     
+    ;accoc procedure
+    (define (assoc key records)
+      (cond ((null? records) false)
+            ((same-key? key (caar records)) (car records))
+            (else (assoc key (cdr records)))))
+
     (define (lookup key-1 key-2)
       (let ((subtable (assoc key-1 (cdr local-table))))
         (if subtable
-          (let ((record (assoc key-1 (cdr subtable))))
+          (let ((record (assoc key-2 (cdr subtable))))
             (if record
               (cdr record)
               false))
@@ -33,8 +40,9 @@
 
 ;run
 (define operation-table (make-table eq?))
+(define operation-table (make-table equal?))
 (define get (operation-table 'lookup-proc))
 (define put (operation-table 'insert-proc!))
 
 (put 'table1 'a 1)
-(get 'table2 'a)
+(get 'table1 'a)
