@@ -1,5 +1,5 @@
 ;; why accept-action-procedure! defined in make-wire?
-;=>
+;=> 
 
 ; the procedure accept-action-procedure! has to be initialize in the wire because
 ; it has to be executed immediately, if not then the system will not run
