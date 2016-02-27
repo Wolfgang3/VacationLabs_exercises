@@ -5,4 +5,4 @@
 ; if we want the correct order of the operation.
 ; if use other implementation like stack LIFO we might get wrong output.
 ; eg. In half-adder all the next result are dependent on the previous value of the input.
-; taht is why a queue has to used in agenda. 
+; that is why a queue has to be used in agenda. 
