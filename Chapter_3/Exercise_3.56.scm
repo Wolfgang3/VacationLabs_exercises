@@ -15,6 +15,7 @@
                                  (merge (stream-cdr s1)
                                         (stream-cdr s2)))))))))
 
+
 (define s 
   (cons-stream 
     1 
